@@ -12,6 +12,7 @@ public class App {
         buffer.add(1);
         buffer.add(2);
         buffer.add(3);
+        buffer.poll();
 
         for (var n : buffer) {
             System.out.println(n);
