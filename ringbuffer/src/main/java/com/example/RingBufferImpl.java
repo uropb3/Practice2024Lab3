@@ -1,8 +1,8 @@
-package ringbuffer;
+package com.example;
 
 import java.util.Iterator;
 
-public class RingBufferImpl<E> implements RingBuffer<E> { 
+public class RingBufferImpl<E> implements RingBuffer<E> {
     private static class Node<E> {
         public E data;
         public Node<E> next;
