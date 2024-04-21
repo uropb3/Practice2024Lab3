@@ -16,4 +16,12 @@ public class RingBufferImplTest {
         RingBuffer<Integer> buffer = new RingBufferImpl<>(3);
         assertNull(buffer.peek());
     }
+
+    @Test
+    void addToFull() {
+        RingBuffer<Integer> buffer = new RingBufferImpl<>(1);
+        buffer.add(1);
+        buffer.add(2);
+        assertEquals(2, buffer.peek());
+    }
 }
