@@ -15,6 +15,14 @@ pipeline {
                 bat 'mvn test'
             }
         }
+        stage("Static analyse") {
+            when {
+                branch 'develop'
+            }
+            steps {
+                bat 'mvn checkstyle:check'
+            }
+        }
         stage("Report") {
             when {
                 branch 'feature/*'
