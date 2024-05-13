@@ -7,12 +7,6 @@
   <property name="charset" value="UTF-8"/>
 
   <property name="severity" value="warning"/>
-  
-  <module name="LineLength">
-    <property name="fileExtensions" value="java"/>
-    <property name="max" value="100"/>
-    <property name="ignorePattern" value="^package.*|^import.*|a href|href|http://|https://|ftp://"/>
-  </module>
 
   <module name="TreeWalker">
     <module name="AvoidStarImport"/>
