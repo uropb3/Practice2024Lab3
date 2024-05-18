@@ -34,6 +34,10 @@ public class RingBufferImpl<E> implements RingBuffer<E> {
         return result;
     }
 
+    public void foo(){
+        System.out.println("qqq");
+    }
+
     public E peek() {
         if (first == null) {
             return null;
