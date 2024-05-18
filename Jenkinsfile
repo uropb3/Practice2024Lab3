@@ -8,9 +8,6 @@ pipeline {
             }
         }
         stage("Tests") {
-            when {
-                branch 'feature/*'
-            }
             steps {
                 bat 'mvn test'
             }
@@ -24,9 +21,6 @@ pipeline {
             }
         }
         stage("Report") {
-            when {
-                branch 'feature/*'
-            }
             steps {
                 junit testResults: '**/surefire-reports/*.xml'
                 jacoco()
